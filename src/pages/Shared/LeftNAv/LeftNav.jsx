@@ -1,6 +1,10 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import EditorInsigthsCol from "../EditorInsigthsCol/EditorInsigthsCol";
+import first from "../../../assets/1.png";
+import second from "../../../assets/2.png";
+import third from "../../../assets/3.png";
 
 const LeftNav = () => {
   const [categories, setCategories] = useState([]);
@@ -25,6 +29,11 @@ const LeftNav = () => {
             {category.name}
           </Link>
         ))}
+      </div>
+      <div>
+        <EditorInsigthsCol img={first} />
+        <EditorInsigthsCol img={second} />
+        <EditorInsigthsCol img={third} />
       </div>
     </div>
   );

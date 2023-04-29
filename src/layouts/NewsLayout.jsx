@@ -1,25 +1,23 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useEffect } from "react";
+import React from "react";
 import Header from "../pages/Shared/Header/Header";
 import Footer from "../pages/Shared/Footer/Footer";
 import { Col, Container, Row } from "react-bootstrap";
 import RightNav from "../pages/Shared/RightNav/RightNav";
-import LeftNav from "../pages/Shared/LeftNAv/LeftNav";
 import { Outlet } from "react-router-dom";
+import EditorInsigthsRow from "../pages/Shared/EditorInsigthsRow/EditorInsigthsRow";
 import ScrollToTop from "../ScrollToTop/ScrollToTop";
 
-const Main = () => {
+const NewsLayout = () => {
   return (
     <div>
       <ScrollToTop />
       <Header />
       <Container className="my-5">
         <Row>
-          <Col lg={3}>
-            <LeftNav />
-          </Col>
-          <Col lg={6} sm>
+          <Col lg={9} sm>
             <Outlet />
+            <EditorInsigthsRow />
           </Col>
           <Col lg={3}>
             <RightNav />
@@ -31,4 +29,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default NewsLayout;
