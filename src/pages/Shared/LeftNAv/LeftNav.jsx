@@ -10,7 +10,9 @@ const LeftNav = () => {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     const loadData = async () => {
-      const response = await fetch("http://localhost:5000/categories");
+      const response = await fetch(
+        "https://the-dragon-news-server-arifprogrammer.vercel.app/categories"
+      );
       const data = await response.json();
       setCategories(data);
     };
